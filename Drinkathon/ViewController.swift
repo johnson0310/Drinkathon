@@ -13,21 +13,26 @@ class ViewController: UIViewController {
     /*Variables for main screen*/
     //Gender
     @IBOutlet weak var genderInputTextField: UITextField!
-    var genderPicker = UIPickerView()
-    var genderPickerData : [String] = ["Male","Female"]
+    let genderPicker = UIPickerView()
+    let genderPickerData : [String] = ["Male","Female"]
     //Male: 0, Female: 1
     var gender : Int = 0
     
     
     //Weight
     @IBOutlet weak var weightInputTextField: UITextField!
-    var weightPicker = UIPickerView()
-    var weightPickerData : [Int] = [100,110,120,130,140,150,160,170,180,190,200,210,220,230,240]
+    let weightPicker = UIPickerView()
+    let weightPickerData : [Int] = [100,110,120,130,140,150,160,170,180,190,200,210,220,230,240]
     var weight : Int?
     
     //Image
     @IBOutlet weak var redSoloCup: UIImageView!
     
+    //ToolBar
+    let toolBar = UIToolbar()
+    
+    //Background
+    let firstScreenBackgroundImageView = UIImageView()
     
     
     
@@ -35,55 +40,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
-        /* Initialilze variables*/
-        //GenderPicker
-        genderPicker.selectRow(0, inComponent: 0, animated: true)
-        genderPicker.delegate = self
-        genderPicker.dataSource = self
-        
-        
-        //WeightPicker
-        weightPicker.selectRow(2, inComponent: 0, animated: true)
-        weightPicker.delegate = self
-        weightPicker.dataSource = self
-        
-        //Image
-        redSoloCup.image = UIImage(named: "first_scene_button.JPG")
-        
-        // create tap gesture recognizer
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.imageTapped(gesture:)))
-        // add it to the image view;
-        redSoloCup.addGestureRecognizer(tapGesture)
-        // make sure imageView can be interacted with by user
-        redSoloCup.isUserInteractionEnabled = true
-        
-        
-//        let fm = FileManager.default
-//        let path = Bundle.main.resourcePath!
-//        let items = try! fm.contentsOfDirectory(atPath: path)
-//        for item in items {
-//            if item == "red_solo_cup.jpg"{
-//                redSoloCup = item
-//            }
-//        }
+        firstScreenInitialization()
+        toolBarSetUp()
         
         
         
-        
-        /* Create Cancel and Done button on UIPickerView*/
-        let toolBar = UIToolbar()
-        toolBar.barStyle = UIBarStyle.default
-        toolBar.isTranslucent = true
-        toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
-        toolBar.sizeToFit()
-        
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: #selector(donePicker))
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(donePicker))
-        
-        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
-        toolBar.isUserInteractionEnabled = true
         
         
         
@@ -97,11 +58,66 @@ class ViewController: UIViewController {
         
     }
     
+    
+    
+    func firstScreenInitialization() {
+        /* Initialilze variables*/
+        //GenderPicker
+        genderPicker.selectRow(0, inComponent: 0, animated: true)
+        genderPicker.delegate = self
+        genderPicker.dataSource = self
+        
+        
+        //WeightPicker
+        weightPicker.selectRow(2, inComponent: 0, animated: true)
+        weightPicker.delegate = self
+        weightPicker.dataSource = self
+        
+        
+        //Image
+        redSoloCup.image = UIImage(named: "first_scene_button.JPG")
+        // create tap gesture recognizer
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.imageTapped(gesture:)))
+        // add it to the image view;
+        redSoloCup.addGestureRecognizer(tapGesture)
+        // make sure imageView can be interacted with by user
+        redSoloCup.isUserInteractionEnabled = true
+        
+        
+        //Set Background
+        view.addSubview(firstScreenBackgroundImageView)
+        firstScreenBackgroundImageView.translatesAutoresizingMaskIntoConstraints = false
+        firstScreenBackgroundImageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        firstScreenBackgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        firstScreenBackgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        firstScreenBackgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        firstScreenBackgroundImageView.image = UIImage(named: "foamed_beer_background.jpg")
+        view.sendSubviewToBack(firstScreenBackgroundImageView)
+        
+    }
+    
+    //Set up the tool bar with Cancel and Done functionality
+    func toolBarSetUp() {
+        /* Create Cancel and Done button on UIPickerView*/
+        toolBar.barStyle = UIBarStyle.default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: #selector(donePicker))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(donePicker))
+        
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+    }
+    
     //Close the UIPickerView after making a selection
     @objc func donePicker() {
         weightInputTextField.resignFirstResponder()
         genderInputTextField.resignFirstResponder()
     }
+    
     
     //Check if the image is tapped
     @objc func imageTapped(gesture: UIGestureRecognizer) {
