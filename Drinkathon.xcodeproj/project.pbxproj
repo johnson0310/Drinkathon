@@ -23,6 +23,9 @@
 		2CA68F302268378D008AA4FF /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA68F2F2268378D008AA4FF /* NotificationController.swift */; };
 		2CA68F322268378D008AA4FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA68F312268378D008AA4FF /* Assets.xcassets */; };
 		2CFBD7402268F3A1005A5196 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFBD73F2268F3A1005A5196 /* UserDefaults.swift */; };
+		2CFBD743226925F6005A5196 /* red_solo_cup.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2CFBD742226925F6005A5196 /* red_solo_cup.jpg */; };
+		2CFBD74522692672005A5196 /* TrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFBD74422692672005A5196 /* TrackingViewController.swift */; };
+		2CFBD747226947F0005A5196 /* first_scene_button.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2CFBD746226947F0005A5196 /* first_scene_button.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +110,9 @@
 		2CA68F332268378D008AA4FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CA68F342268378D008AA4FF /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		2CFBD73F2268F3A1005A5196 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		2CFBD742226925F6005A5196 /* red_solo_cup.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = red_solo_cup.jpg; sourceTree = "<group>"; };
+		2CFBD74422692672005A5196 /* TrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewController.swift; sourceTree = "<group>"; };
+		2CFBD746226947F0005A5196 /* first_scene_button.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = first_scene_button.JPG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +156,7 @@
 				2CA68F1B2268378C008AA4FF /* Drinkathon WatchKit App */,
 				2CA68F2A2268378D008AA4FF /* Drinkathon WatchKit Extension */,
 				2CA68EF02268378C008AA4FF /* Products */,
+				2CFBD741226925F6005A5196 /* Media Content */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,6 +182,7 @@
 				2CA68EFB2268378C008AA4FF /* LaunchScreen.storyboard */,
 				2CA68EFE2268378C008AA4FF /* Info.plist */,
 				2CFBD73F2268F3A1005A5196 /* UserDefaults.swift */,
+				2CFBD74422692672005A5196 /* TrackingViewController.swift */,
 			);
 			path = Drinkathon;
 			sourceTree = "<group>";
@@ -218,6 +226,15 @@
 				2CA68F342268378D008AA4FF /* PushNotificationPayload.apns */,
 			);
 			path = "Drinkathon WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		2CFBD741226925F6005A5196 /* Media Content */ = {
+			isa = PBXGroup;
+			children = (
+				2CFBD742226925F6005A5196 /* red_solo_cup.jpg */,
+				2CFBD746226947F0005A5196 /* first_scene_button.JPG */,
+			);
+			path = "Media Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,6 +388,8 @@
 				2CA68EFD2268378C008AA4FF /* LaunchScreen.storyboard in Resources */,
 				2CA68EFA2268378C008AA4FF /* Assets.xcassets in Resources */,
 				2CA68EF82268378C008AA4FF /* Main.storyboard in Resources */,
+				2CFBD747226947F0005A5196 /* first_scene_button.JPG in Resources */,
+				2CFBD743226925F6005A5196 /* red_solo_cup.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CA68EF52268378C008AA4FF /* ViewController.swift in Sources */,
+				2CFBD74522692672005A5196 /* TrackingViewController.swift in Sources */,
 				2CA68EF32268378C008AA4FF /* AppDelegate.swift in Sources */,
 				2CFBD7402268F3A1005A5196 /* UserDefaults.swift in Sources */,
 			);

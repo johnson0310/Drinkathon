@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    /*Variables for body parameters*/
+    /*Variables for main screen*/
     //Gender
     @IBOutlet weak var genderInputTextField: UITextField!
     var genderPicker = UIPickerView()
@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     var weightPicker = UIPickerView()
     var weightPickerData : [Int] = [100,110,120,130,140,150,160,170,180,190,200,210,220,230,240]
     
+    //Image
+    @IBOutlet weak var redSoloCup: UIImageView!
     
     
     override func viewDidLoad() {
@@ -29,7 +31,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         
-        /* Initialilze PickerView */
+        /* Initialilze variables*/
         //GenderPicker
         genderPicker.selectRow(0, inComponent: 0, animated: true)
         genderPicker.delegate = self
@@ -39,7 +41,29 @@ class ViewController: UIViewController {
         weightPicker.selectRow(2, inComponent: 0, animated: true)
         weightPicker.delegate = self
         weightPicker.dataSource = self
-
+        
+        //Image
+        var redSoloCupFile: String = "red_solo_cup.jpg"
+        redSoloCup.image = UIImage(named: "first_scene_button.JPG")
+        
+        // create tap gesture recognizer
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.imageTapped(gesture:)))
+        // add it to the image view;
+        redSoloCup.addGestureRecognizer(tapGesture)
+        // make sure imageView can be interacted with by user
+        redSoloCup.isUserInteractionEnabled = true
+        
+//        let fm = FileManager.default
+//        let path = Bundle.main.resourcePath!
+//        let items = try! fm.contentsOfDirectory(atPath: path)
+//        for item in items {
+//            if item == "red_solo_cup.jpg"{
+//                redSoloCup = item
+//            }
+//        }
+        
+        
+        
         
         /* Create Cancel and Done button on UIPickerView*/
         let toolBar = UIToolbar()
@@ -57,8 +81,7 @@ class ViewController: UIViewController {
         
         
         
-        
-        /* Connect PickerView and TextFields */
+        /* Connect PickerView to TextFields, add ToolBar to PickerView */
         genderInputTextField.inputView = genderPicker
         genderInputTextField.inputAccessoryView = toolBar
         
@@ -73,11 +96,22 @@ class ViewController: UIViewController {
         weightInputTextField.resignFirstResponder()
         genderInputTextField.resignFirstResponder()
     }
+    
+    //Check if the image is tapped
+    @objc func imageTapped(gesture: UIGestureRecognizer) {
+        // if the tapped view is a UIImageView then set it to imageview
+        if (gesture.view as? UIImageView) != nil {
+            print("Image Tapped")
+            //Here you can initiate your new ViewController
+            
+        }
+    }
   
 }
 
+
+/* Controls UIPickerView parameters */
 extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-    
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if pickerView == genderPicker{
@@ -116,7 +150,4 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         
         return "2"
     }
-    
-    
-
 }
