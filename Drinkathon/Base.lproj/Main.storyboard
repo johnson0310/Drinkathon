@@ -65,6 +65,7 @@
                         <outlet property="genderInputTextField" destination="zvJ-Wd-yyH" id="siG-gP-VMb"/>
                         <outlet property="redSoloCup" destination="q2i-2i-8sc" id="sP6-Dh-NS3"/>
                         <outlet property="weightInputTextField" destination="eUc-v7-jIr" id="9OT-BW-NTw"/>
+                        <segue destination="5aS-qd-J5v" kind="presentation" identifier="first_to_second" id="RoZ-26-acz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

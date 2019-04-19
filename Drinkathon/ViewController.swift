@@ -15,15 +15,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var genderInputTextField: UITextField!
     var genderPicker = UIPickerView()
     var genderPickerData : [String] = ["Male","Female"]
+    //Male: 0, Female: 1
+    var gender : Int = 0
     
     
     //Weight
     @IBOutlet weak var weightInputTextField: UITextField!
     var weightPicker = UIPickerView()
     var weightPickerData : [Int] = [100,110,120,130,140,150,160,170,180,190,200,210,220,230,240]
+    var weight : Int?
     
     //Image
     @IBOutlet weak var redSoloCup: UIImageView!
+    
+    
     
     
     override func viewDidLoad() {
@@ -37,13 +42,13 @@ class ViewController: UIViewController {
         genderPicker.delegate = self
         genderPicker.dataSource = self
         
+        
         //WeightPicker
         weightPicker.selectRow(2, inComponent: 0, animated: true)
         weightPicker.delegate = self
         weightPicker.dataSource = self
         
         //Image
-        var redSoloCupFile: String = "red_solo_cup.jpg"
         redSoloCup.image = UIImage(named: "first_scene_button.JPG")
         
         // create tap gesture recognizer
@@ -52,6 +57,7 @@ class ViewController: UIViewController {
         redSoloCup.addGestureRecognizer(tapGesture)
         // make sure imageView can be interacted with by user
         redSoloCup.isUserInteractionEnabled = true
+        
         
 //        let fm = FileManager.default
 //        let path = Bundle.main.resourcePath!
@@ -102,9 +108,33 @@ class ViewController: UIViewController {
         // if the tapped view is a UIImageView then set it to imageview
         if (gesture.view as? UIImageView) != nil {
             print("Image Tapped")
-            //Here you can initiate your new ViewController
+            
+            //Check if both textfields are filled
+            if genderInputTextField.text == "" || weightInputTextField.text == "" {
+                //If any of the textfield is not filled, create an alert
+                let incompleteAlert = UIAlertController(title: "Incomplete Profile", message: "Please complete both fields so we can better calculate your BAC level later!", preferredStyle: .alert)
+                incompleteAlert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                self.present(incompleteAlert, animated: true)
+            } else {
+                getInputFromTextFields()
+                //Here you can initiate your new ViewController
+                performSegue(withIdentifier: "first_to_second", sender: nil)
+            }
+            
             
         }
+    }
+    
+    // Record user input and store them into the global variable
+    func getInputFromTextFields(){
+        if genderInputTextField.text == "Male"{
+            gender = 0
+        } else {
+            gender = 1
+        }
+        weight = Int(weightInputTextField.text!)
+        print(gender)
+        print(weight!)
     }
   
 }
