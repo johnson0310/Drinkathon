@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     static var weight : Int?
     
     //Image
-    @IBOutlet weak var submitOption: UIImageView!
+    @IBOutlet weak var redSoloCup: UIImageView!
     
     //ToolBar
     let toolBar = UIToolbar()
@@ -73,13 +73,13 @@ class ViewController: UIViewController {
         
         
         //Image
-        submitOption.image = UIImage(named: "first_scene_button.JPG")
+        redSoloCup.image = UIImage(named: "first_scene_button.JPG")
         // create tap gesture recognizer
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.imageTapped(gesture:)))
         // add it to the image view;
-        submitOption.addGestureRecognizer(tapGesture)
+        redSoloCup.addGestureRecognizer(tapGesture)
         // make sure imageView can be interacted with by user
-        submitOption.isUserInteractionEnabled = true
+        redSoloCup.isUserInteractionEnabled = true
         
         
         //Set Background

@@ -24,6 +24,10 @@ class TrackingViewController: UIViewController {
     //Image
     @IBOutlet weak var addDrink: UIImageView!
     
+    //Drink counter
+    @IBOutlet weak var drinkCounter: UILabel!
+    var numDrinks = 0
+    
     
     
     
@@ -32,8 +36,7 @@ class TrackingViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        //secondScreenInitialization()
-        toggleTimer(on: true)
+        secondScreenInitialization()
         
         
     }
@@ -44,15 +47,23 @@ class TrackingViewController: UIViewController {
         /* Initialilze variables */
         
         //Image
-        //addDrink.image = UIImage(named: "red_solo_cup.jpg")
-//        // create tap gesture recognizer
-//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(gesture:)))
-//        // add it to the image view;
-//        addDrink.addGestureRecognizer(tapGesture)
-//        // make sure imageView can be interacted with by user
-//        addDrink.isUserInteractionEnabled = true
+        addDrink.image = UIImage(named: "red_solo_cup.jpg")
+        // create tap gesture recognizer
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(gesture:)))
+        // add it to the image view;
+        addDrink.addGestureRecognizer(tapGesture)
+        // make sure imageView can be interacted with by user
+        addDrink.isUserInteractionEnabled = true
         
         
+    }
+    
+    //Calculate timer time in the format of HH:MM:SS
+    func formattedTimer (time: Int) -> String {
+        let hours = Int(time) / 3600
+        let minutes = Int(time) / 60 % 60
+        let seconds = Int(time) % 60
+        return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
     }
     
     //Check if the image is tapped
@@ -61,6 +72,14 @@ class TrackingViewController: UIViewController {
         if (gesture.view as? UIImageView) != nil {
             print("Image2 Tapped")
             
+            if isTimerOn == false {
+                toggleTimer(on: true)
+                isTimerOn = true
+            }
+            
+            numDrinks += 1
+            drinkCounter.text = String(numDrinks)
+
         }
     }
     
@@ -71,7 +90,7 @@ class TrackingViewController: UIViewController {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] (_) in
             guard let strongSelf = self else { return }
             strongSelf.duration += 1
-            strongSelf.drinkTimer.text = String(strongSelf.duration)
+            strongSelf.drinkTimer.text = self?.formattedTimer(time: strongSelf.duration)
         })
     }
     
