@@ -16,14 +16,14 @@ class ViewController: UIViewController {
     let genderPicker = UIPickerView()
     let genderPickerData : [String] = ["Male","Female"]
     //Male: 0, Female: 1
-    var gender : Int = 0
+    static var gender : Int = 0
     
     
     //Weight
     @IBOutlet weak var weightInputTextField: UITextField!
     let weightPicker = UIPickerView()
     let weightPickerData : [Int] = [100,110,120,130,140,150,160,170,180,190,200,210,220,230,240]
-    var weight : Int?
+    static var weight : Int?
     
     //Image
     @IBOutlet weak var redSoloCup: UIImageView!
@@ -34,7 +34,9 @@ class ViewController: UIViewController {
     //Background
     let firstScreenBackgroundImageView = UIImageView()
     
+    //Debug
     
+    @IBOutlet weak var debugButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,11 +45,7 @@ class ViewController: UIViewController {
         firstScreenInitialization()
         toolBarSetUp()
         
-        
-        
-        
-        
-        
+
         /* Connect PickerView to TextFields, add ToolBar to PickerView */
         genderInputTextField.inputView = genderPicker
         genderInputTextField.inputAccessoryView = toolBar
@@ -59,7 +57,7 @@ class ViewController: UIViewController {
     }
     
     
-    
+    //Initialize all fields on first screen
     func firstScreenInitialization() {
         /* Initialilze variables*/
         //GenderPicker
@@ -94,6 +92,14 @@ class ViewController: UIViewController {
         firstScreenBackgroundImageView.image = UIImage(named: "foamed_beer_background.jpg")
         view.sendSubviewToBack(firstScreenBackgroundImageView)
         
+        
+        //Debug
+        debugButton.addTarget(self, action: #selector(debugButton1), for: .touchUpInside)
+        
+    }
+    
+    @objc func debugButton1() {
+        performSegue(withIdentifier: "first_to_second", sender: nil)
     }
     
     //Set up the tool bar with Cancel and Done functionality
@@ -144,13 +150,13 @@ class ViewController: UIViewController {
     // Record user input and store them into the global variable
     func getInputFromTextFields(){
         if genderInputTextField.text == "Male"{
-            gender = 0
+            ViewController.gender = 0
         } else {
-            gender = 1
+            ViewController.gender = 1
         }
-        weight = Int(weightInputTextField.text!)
-        print(gender)
-        print(weight!)
+        ViewController.weight = Int(weightInputTextField.text!)
+        print(ViewController.gender)
+        print(ViewController.weight!)
     }
   
 }
