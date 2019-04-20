@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     static var weight : Int?
     
     //Image
-    @IBOutlet weak var redSoloCup: UIImageView!
+    @IBOutlet weak var submitOption: UIImageView!
     
     //ToolBar
     let toolBar = UIToolbar()
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
     
     //Initialize all fields on first screen
     func firstScreenInitialization() {
-        /* Initialilze variables*/
+        /* Initialilze variables */
         //GenderPicker
         genderPicker.selectRow(0, inComponent: 0, animated: true)
         genderPicker.delegate = self
@@ -73,13 +73,13 @@ class ViewController: UIViewController {
         
         
         //Image
-        redSoloCup.image = UIImage(named: "first_scene_button.JPG")
+        submitOption.image = UIImage(named: "first_scene_button.JPG")
         // create tap gesture recognizer
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.imageTapped(gesture:)))
         // add it to the image view;
-        redSoloCup.addGestureRecognizer(tapGesture)
+        submitOption.addGestureRecognizer(tapGesture)
         // make sure imageView can be interacted with by user
-        redSoloCup.isUserInteractionEnabled = true
+        submitOption.isUserInteractionEnabled = true
         
         
         //Set Background
@@ -142,8 +142,6 @@ class ViewController: UIViewController {
                 //Here you can initiate your new ViewController
                 performSegue(withIdentifier: "first_to_second", sender: nil)
             }
-            
-            
         }
     }
     

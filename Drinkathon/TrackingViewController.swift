@@ -21,6 +21,10 @@ class TrackingViewController: UIViewController {
     let gender = ViewController.gender
     let weight = ViewController.weight
     
+    //Image
+    @IBOutlet weak var addDrink: UIImageView!
+    
+    
     
     
     
@@ -28,14 +32,41 @@ class TrackingViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-       toggleTimer(on: true)
-        
+        //secondScreenInitialization()
+        toggleTimer(on: true)
         
         
     }
     
 
+    //Initialize all fields on second screen
+    func secondScreenInitialization() {
+        /* Initialilze variables */
+        
+        //Image
+        //addDrink.image = UIImage(named: "red_solo_cup.jpg")
+//        // create tap gesture recognizer
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(gesture:)))
+//        // add it to the image view;
+//        addDrink.addGestureRecognizer(tapGesture)
+//        // make sure imageView can be interacted with by user
+//        addDrink.isUserInteractionEnabled = true
+        
+        
+    }
+    
+    //Check if the image is tapped
+    @objc func imageTapped(gesture: UIGestureRecognizer) {
+        // if the tapped view is a UIImageView then set it to imageview
+        if (gesture.view as? UIImageView) != nil {
+            print("Image2 Tapped")
+            
+        }
+    }
+    
+    
+    
+    
     func toggleTimer(on: Bool) {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] (_) in
             guard let strongSelf = self else { return }
@@ -43,6 +74,8 @@ class TrackingViewController: UIViewController {
             strongSelf.drinkTimer.text = String(strongSelf.duration)
         })
     }
+    
+    
     
     
     
