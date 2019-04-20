@@ -16,6 +16,7 @@ class TrackingViewController: UIViewController {
     var duration = 0
     var timer = Timer()
     var isTimerOn = false
+    var bacTimeCounter = 0
     
     //Body parameter
     let gender = ViewController.gender
@@ -27,6 +28,9 @@ class TrackingViewController: UIViewController {
     //Drink counter
     @IBOutlet weak var drinkCounter: UILabel!
     var numDrinks = 0
+    
+    //BAC
+    @IBOutlet weak var bacLevelLable: UILabel!
     
     
     
@@ -66,6 +70,32 @@ class TrackingViewController: UIViewController {
         return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
     }
     
+    
+    //Calculate BAC
+    func bacLevel(numDrinks: Int, sex: Int, weight: Int, timeSinceFirst: Int) -> Double {
+        var ratio = Double()
+        let numDrinksF = Double(numDrinks)
+        let weightF = Double(weight)
+        let timeSinceFirstF = Double(timeSinceFirst)
+        
+        if sex == 0 {
+            ratio = 0.73
+        } else {
+            ratio = 0.68
+        }
+        
+        //Liquid ounces of alchohol consumed
+        var bac = ((numDrinksF * 1.5) * 0.4) * 5.14
+        
+        bac = bac / (weightF * ratio)
+        bac = bac - timeSinceFirstF * 0.15
+        
+        return bac
+    }
+    
+    
+    
+    
     //Check if the image is tapped
     @objc func imageTapped(gesture: UIGestureRecognizer) {
         // if the tapped view is a UIImageView then set it to imageview
@@ -79,23 +109,29 @@ class TrackingViewController: UIViewController {
             
             numDrinks += 1
             drinkCounter.text = String(numDrinks)
-
         }
     }
     
     
     
-    
+    //Start a timer
+    //Updates time label
+    //Updates BAC level label
     func toggleTimer(on: Bool) {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] (_) in
             guard let strongSelf = self else { return }
             strongSelf.duration += 1
             strongSelf.drinkTimer.text = self?.formattedTimer(time: strongSelf.duration)
+            strongSelf.bacTimeCounter += 1
+        
+            //Update BAC every second
+            let currentBAC = String(format: "%.3f", strongSelf.bacLevel(numDrinks: strongSelf.numDrinks, sex: Int(strongSelf.gender), weight: Int(strongSelf.weight!), timeSinceFirst: Int(strongSelf.duration) / 3600))
+            
+            strongSelf.bacLevelLable.text = currentBAC
         })
     }
     
-    
-    
+
     
     
 }

@@ -145,7 +145,7 @@ class ViewController: UIViewController {
         }
     }
     
-    // Record user input and store them into the global variable
+    // Record user input and store th®m into the global variable
     func getInputFromTextFields(){
         if genderInputTextField.text == "Male"{
             ViewController.gender = 0
