@@ -109,6 +109,8 @@ class TrackingViewController: UIViewController {
             
             numDrinks += 1
             drinkCounter.text = String(numDrinks)
+            
+            updateBACLevel()
         }
     }
     
@@ -124,13 +126,19 @@ class TrackingViewController: UIViewController {
             strongSelf.drinkTimer.text = self?.formattedTimer(time: strongSelf.duration)
             strongSelf.bacTimeCounter += 1
         
-            //Update BAC every second
-            let currentBAC = String(format: "%.3f", strongSelf.bacLevel(numDrinks: strongSelf.numDrinks, sex: Int(strongSelf.gender), weight: Int(strongSelf.weight!), timeSinceFirst: Int(strongSelf.duration) / 3600))
+            strongSelf.updateBACLevel()
             
-            strongSelf.bacLevelLable.text = currentBAC
         })
     }
     
+    
+    //Updates BAC level
+    func updateBACLevel() {
+        //Update BAC every second
+        var currentBAC = String(format: "%.3f", self.bacLevel(numDrinks: self.numDrinks, sex: Int(self.gender), weight: Int(self.weight!), timeSinceFirst: Int(self.duration) / 3600))
+        currentBAC = currentBAC + " %"
+        self.bacLevelLable.text = currentBAC
+    }
 
     
     
