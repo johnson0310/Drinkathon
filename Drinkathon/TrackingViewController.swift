@@ -38,6 +38,9 @@ class TrackingViewController: UIViewController {
     //BAC
     @IBOutlet weak var bacLevelLable: UILabel!
     
+    //Background
+    let secondScreenBackgroundImageView = UIImageView()
+    
     
     
     
@@ -46,6 +49,17 @@ class TrackingViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //Pop up alert to notify user how to add drinks
+        let howToAddDrinkAlert = UIAlertController(title: "", message: "Tap the Red Solo Cup to add a drink!", preferredStyle: .alert)
+        howToAddDrinkAlert.addAction(UIAlertAction(title: "Got it!", style: .cancel, handler: nil))
+        DispatchQueue.main.async {
+            self.present(howToAddDrinkAlert, animated: true, completion: nil)
+        }
+        
+        
+        //self.present(howToAddDrinkAlert, animated: true)
+        
         secondScreenInitialization()
         
         
@@ -55,16 +69,30 @@ class TrackingViewController: UIViewController {
 
     //Initialize all fields on second screen
     func secondScreenInitialization() {
+        
+        
         /* Initialilze variables */
         
         //Image
-        addDrink.image = UIImage(named: "red_solo_cup.jpg")
+        
+        
+        addDrink.image = UIImage(named: "red_solo_cup_burned.png")
         // create tap gesture recognizer
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(gesture:)))
         // add it to the image view;
         addDrink.addGestureRecognizer(tapGesture)
         // make sure imageView can be interacted with by user
         addDrink.isUserInteractionEnabled = true
+        
+        //Set Background
+        view.addSubview(secondScreenBackgroundImageView)
+        secondScreenBackgroundImageView.translatesAutoresizingMaskIntoConstraints = false
+        secondScreenBackgroundImageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        secondScreenBackgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        secondScreenBackgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        secondScreenBackgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        secondScreenBackgroundImageView.image = UIImage(named: "foamed_beer_background.jpg")
+        view.sendSubviewToBack(secondScreenBackgroundImageView)
         
         
     }
