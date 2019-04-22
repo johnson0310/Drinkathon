@@ -18,6 +18,12 @@ class TrackingViewController: UIViewController {
     var isTimerOn = false
     var bacTimeCounter = 0
     
+    let calendar = Calendar.current
+    
+    var start: CFAbsoluteTime!
+    var startTime = Int()
+    var currentTime = Int()
+    
     //Body parameter
     let gender = ViewController.gender
     let weight = ViewController.weight
@@ -41,6 +47,7 @@ class TrackingViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         secondScreenInitialization()
+        
         
         
     }
@@ -102,7 +109,10 @@ class TrackingViewController: UIViewController {
         if (gesture.view as? UIImageView) != nil {
             print("Image2 Tapped")
             
+            //Check if the image was clicked for the first time
             if isTimerOn == false {
+                //Set start time of the first drink
+                startTime = Int(CFAbsoluteTimeGetCurrent())
                 toggleTimer(on: true)
                 isTimerOn = true
             }
@@ -120,14 +130,17 @@ class TrackingViewController: UIViewController {
     //Updates time label
     //Updates BAC level label
     func toggleTimer(on: Bool) {
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] (_) in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { [weak self] (_) in
             guard let strongSelf = self else { return }
-            strongSelf.duration += 1
+
+            //Find the new duration
+            strongSelf.currentTime = Int(CFAbsoluteTimeGetCurrent())
+            strongSelf.duration = strongSelf.currentTime - strongSelf.startTime
+            
             strongSelf.drinkTimer.text = self?.formattedTimer(time: strongSelf.duration)
             strongSelf.bacTimeCounter += 1
         
             strongSelf.updateBACLevel()
-            
         })
     }
     
