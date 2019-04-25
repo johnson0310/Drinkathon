@@ -55,7 +55,7 @@ class ViewController: UIViewController {
         weightInputTextField.inputAccessoryView = toolBar
        
         let user = userProfile(name: "John", gender: "Male", weight: 150, tipsy: 1, blackOut: 1)
-        user.changeName(name: "bob")
+        user.setName(name: "bob")
     }
     
     

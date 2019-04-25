@@ -14,6 +14,9 @@
 		2C3A86C9227140AB00564D29 /* UserLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A86C8227140AB00564D29 /* UserLog.swift */; };
 		2C3A86CC22714F7000564D29 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3A86CB22714F7000564D29 /* CoreData.framework */; };
 		2C3A86F02271511900564D29 /* Drinkathon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A86EE2271511900564D29 /* Drinkathon.xcdatamodeld */; };
+		2C3A86F42271693A00564D29 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A86F32271693A00564D29 /* PersistenceService.swift */; };
+		2C3A86F722716CC800564D29 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A86F522716CC800564D29 /* User+CoreDataClass.swift */; };
+		2C3A86F822716CC800564D29 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A86F622716CC800564D29 /* User+CoreDataProperties.swift */; };
 		2C7CA009226D45F8006256BD /* red_solo_cup_burned.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C7CA008226D45F8006256BD /* red_solo_cup_burned.png */; };
 		2CA68EF32268378C008AA4FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA68EF22268378C008AA4FF /* AppDelegate.swift */; };
 		2CA68EF52268378C008AA4FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA68EF42268378C008AA4FF /* ViewController.swift */; };
@@ -103,6 +106,9 @@
 		2C3A86C8227140AB00564D29 /* UserLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLog.swift; sourceTree = "<group>"; };
 		2C3A86CB22714F7000564D29 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2C3A86EF2271511900564D29 /* Drinkathon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Drinkathon.xcdatamodel; sourceTree = "<group>"; };
+		2C3A86F32271693A00564D29 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		2C3A86F522716CC800564D29 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2C3A86F622716CC800564D29 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2C7CA008226D45F8006256BD /* red_solo_cup_burned.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_solo_cup_burned.png; sourceTree = "<group>"; };
 		2CA68EEF2268378C008AA4FF /* Drinkathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drinkathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA68EF22268378C008AA4FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -192,6 +198,8 @@
 		2C3A86F2227152E900564D29 /* AppData */ = {
 			isa = PBXGroup;
 			children = (
+				2C3A86F522716CC800564D29 /* User+CoreDataClass.swift */,
+				2C3A86F622716CC800564D29 /* User+CoreDataProperties.swift */,
 			);
 			path = AppData;
 			sourceTree = "<group>";
@@ -237,6 +245,7 @@
 				2CFBD74422692672005A5196 /* TrackingViewController.swift */,
 				2C3A86C8227140AB00564D29 /* UserLog.swift */,
 				2C3A86EE2271511900564D29 /* Drinkathon.xcdatamodeld */,
+				2C3A86F32271693A00564D29 /* PersistenceService.swift */,
 			);
 			path = Drinkathon;
 			sourceTree = "<group>";
@@ -507,9 +516,12 @@
 				2C3A86F02271511900564D29 /* Drinkathon.xcdatamodeld in Sources */,
 				2CA68EF52268378C008AA4FF /* ViewController.swift in Sources */,
 				2CFBD74522692672005A5196 /* TrackingViewController.swift in Sources */,
+				2C3A86F722716CC800564D29 /* User+CoreDataClass.swift in Sources */,
 				2CA68EF32268378C008AA4FF /* AppDelegate.swift in Sources */,
 				2CFBD7402268F3A1005A5196 /* UserDefaults.swift in Sources */,
+				2C3A86F822716CC800564D29 /* User+CoreDataProperties.swift in Sources */,
 				2CFBD74E226A7DBB005A5196 /* SAButton.swift in Sources */,
+				2C3A86F42271693A00564D29 /* PersistenceService.swift in Sources */,
 				2CFBD74F226A7DBB005A5196 /* SATextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
