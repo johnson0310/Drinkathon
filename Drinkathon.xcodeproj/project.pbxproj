@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C06C6912271703300B41935 /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C06C6902271703300B41935 /* WelcomeScreenViewController.swift */; };
 		2C3A86C222713B9E00564D29 /* License and Author Info.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2C3A86BE22713B9E00564D29 /* License and Author Info.pdf */; };
 		2C3A86C322713B9E00564D29 /* GBC_icon_set.svg in Resources */ = {isa = PBXBuildFile; fileRef = 2C3A86BF22713B9E00564D29 /* GBC_icon_set.svg */; };
 		2C3A86C422713B9E00564D29 /* GBC_icon_set.ai in Resources */ = {isa = PBXBuildFile; fileRef = 2C3A86C022713B9E00564D29 /* GBC_icon_set.ai */; };
@@ -38,7 +39,7 @@
 		2CFBD74522692672005A5196 /* TrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFBD74422692672005A5196 /* TrackingViewController.swift */; };
 		2CFBD747226947F0005A5196 /* first_scene_button.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2CFBD746226947F0005A5196 /* first_scene_button.JPG */; };
 		2CFBD749226A7533005A5196 /* foamed_beer_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2CFBD748226A7533005A5196 /* foamed_beer_background.jpg */; };
-		2CFBD74E226A7DBB005A5196 /* SAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFBD74C226A7DBA005A5196 /* SAButton.swift */; };
+		2CFBD74E226A7DBB005A5196 /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFBD74C226A7DBA005A5196 /* SubmitButton.swift */; };
 		2CFBD74F226A7DBB005A5196 /* SATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFBD74D226A7DBB005A5196 /* SATextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2C06C6902271703300B41935 /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
 		2C3A86BE22713B9E00564D29 /* License and Author Info.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "License and Author Info.pdf"; sourceTree = "<group>"; };
 		2C3A86BF22713B9E00564D29 /* GBC_icon_set.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = GBC_icon_set.svg; sourceTree = "<group>"; };
 		2C3A86C022713B9E00564D29 /* GBC_icon_set.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GBC_icon_set.ai; sourceTree = "<group>"; };
@@ -139,7 +141,7 @@
 		2CFBD74422692672005A5196 /* TrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewController.swift; sourceTree = "<group>"; };
 		2CFBD746226947F0005A5196 /* first_scene_button.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = first_scene_button.JPG; sourceTree = "<group>"; };
 		2CFBD748226A7533005A5196 /* foamed_beer_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = foamed_beer_background.jpg; sourceTree = "<group>"; };
-		2CFBD74C226A7DBA005A5196 /* SAButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAButton.swift; sourceTree = "<group>"; };
+		2CFBD74C226A7DBA005A5196 /* SubmitButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
 		2CFBD74D226A7DBB005A5196 /* SATextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SATextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -246,6 +248,7 @@
 				2C3A86C8227140AB00564D29 /* UserLog.swift */,
 				2C3A86EE2271511900564D29 /* Drinkathon.xcdatamodeld */,
 				2C3A86F32271693A00564D29 /* PersistenceService.swift */,
+				2C06C6902271703300B41935 /* WelcomeScreenViewController.swift */,
 			);
 			path = Drinkathon;
 			sourceTree = "<group>";
@@ -306,7 +309,7 @@
 		2CFBD74B226A7D9C005A5196 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				2CFBD74C226A7DBA005A5196 /* SAButton.swift */,
+				2CFBD74C226A7DBA005A5196 /* SubmitButton.swift */,
 				2CFBD74D226A7DBB005A5196 /* SATextField.swift */,
 			);
 			path = CustomView;
@@ -517,10 +520,11 @@
 				2CA68EF52268378C008AA4FF /* ViewController.swift in Sources */,
 				2CFBD74522692672005A5196 /* TrackingViewController.swift in Sources */,
 				2C3A86F722716CC800564D29 /* User+CoreDataClass.swift in Sources */,
+				2C06C6912271703300B41935 /* WelcomeScreenViewController.swift in Sources */,
 				2CA68EF32268378C008AA4FF /* AppDelegate.swift in Sources */,
 				2CFBD7402268F3A1005A5196 /* UserDefaults.swift in Sources */,
 				2C3A86F822716CC800564D29 /* User+CoreDataProperties.swift in Sources */,
-				2CFBD74E226A7DBB005A5196 /* SAButton.swift in Sources */,
+				2CFBD74E226A7DBB005A5196 /* SubmitButton.swift in Sources */,
 				2C3A86F42271693A00564D29 /* PersistenceService.swift in Sources */,
 				2CFBD74F226A7DBB005A5196 /* SATextField.swift in Sources */,
 			);

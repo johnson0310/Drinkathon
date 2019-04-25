@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4mj-Ym-xmP">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,52 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Welcome Screen View Controller-->
+        <scene sceneID="EUV-wD-nMv">
+            <objects>
+                <viewController id="4mj-Ym-xmP" customClass="WelcomeScreenViewController" customModule="Drinkathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kcJ-72-I0h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DRINKATHON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfg-4W-EVN">
+                                <rect key="frame" x="74" y="297" width="267" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="43"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <size key="shadowOffset" width="0.0" height="-5"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYz-DY-Iiq" customClass="SubmitButton" customModule="Drinkathon" customModuleProvider="target">
+                                <rect key="frame" x="129" y="680" width="157" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Get Started"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;People say drinking isn't a sprint, it's a marathon. We sprint marathons.&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hc-GZ-wMM">
+                                <rect key="frame" x="80" y="382" width="255" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="HB1-I7-yx6"/>
+                    </view>
+                    <connections>
+                        <outlet property="Logo" destination="Qfg-4W-EVN" id="no7-Qe-5Zg"/>
+                        <outlet property="getStarted" destination="eYz-DY-Iiq" id="p6k-Bk-B9J"/>
+                        <outlet property="logo" destination="Qfg-4W-EVN" id="qe6-6n-qlA"/>
+                        <outlet property="quote" destination="5Hc-GZ-wMM" id="oGM-Rh-Xo4"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="welcomeScreen-profileCreation" id="Wbx-tb-xsT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dsc-gu-fqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-717.39130434782612" y="20.758928571428569"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -18,17 +64,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DRINKATHON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfg-4W-EVN">
-                                <rect key="frame" x="56" y="321" width="302" height="54"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="IwU-QT-mxu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="41"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <size key="shadowOffset" width="0.0" height="-3"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eUc-v7-jIr" customClass="SATextField" customModule="Drinkathon" customModuleProvider="target">
                                 <rect key="frame" x="56" y="479" width="302" height="50"/>
                                 <constraints>
@@ -65,12 +100,9 @@
                             <constraint firstItem="eUc-v7-jIr" firstAttribute="top" secondItem="zvJ-Wd-yyH" secondAttribute="bottom" constant="18" id="5CI-fz-B6G"/>
                             <constraint firstItem="eUc-v7-jIr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="36" id="5Dp-oB-gZL"/>
                             <constraint firstItem="zvJ-Wd-yyH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="36" id="Cov-MN-3gz"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Qfg-4W-EVN" secondAttribute="trailing" constant="36" id="GhO-fO-46d"/>
-                            <constraint firstItem="Qfg-4W-EVN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="36" id="HbC-4K-Vj2"/>
                             <constraint firstItem="q2i-2i-8sc" firstAttribute="top" secondItem="eUc-v7-jIr" secondAttribute="bottom" constant="36" id="SJB-Fs-Ghp"/>
                             <constraint firstAttribute="bottomMargin" secondItem="q2i-2i-8sc" secondAttribute="bottom" constant="80" id="TsL-Zi-mS2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zvJ-Wd-yyH" secondAttribute="trailing" constant="36" id="Ww8-A6-32h"/>
-                            <constraint firstItem="zvJ-Wd-yyH" firstAttribute="top" secondItem="Qfg-4W-EVN" secondAttribute="bottom" constant="36" id="bzd-y6-w0o"/>
                             <constraint firstItem="q2i-2i-8sc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="71" id="mzs-Wy-oUQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="q2i-2i-8sc" secondAttribute="trailing" constant="71" id="qFb-tI-Itq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eUc-v7-jIr" secondAttribute="trailing" constant="36" id="wH9-ef-ScO"/>
@@ -87,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+            <point key="canvasLocation" x="135" y="21"/>
         </scene>
         <!--Tracking View Controller-->
         <scene sceneID="Tbg-xb-Lyn">
@@ -194,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pP0-lz-CdV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="773.91304347826087" y="20.758928571428569"/>
+            <point key="canvasLocation" x="967" y="21"/>
         </scene>
     </scenes>
 </document>
