@@ -12,6 +12,8 @@
 		2C3A86C422713B9E00564D29 /* GBC_icon_set.ai in Resources */ = {isa = PBXBuildFile; fileRef = 2C3A86C022713B9E00564D29 /* GBC_icon_set.ai */; };
 		2C3A86C522713B9E00564D29 /* GBC_icon_set.eps in Resources */ = {isa = PBXBuildFile; fileRef = 2C3A86C122713B9E00564D29 /* GBC_icon_set.eps */; };
 		2C3A86C9227140AB00564D29 /* UserLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A86C8227140AB00564D29 /* UserLog.swift */; };
+		2C3A86CC22714F7000564D29 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3A86CB22714F7000564D29 /* CoreData.framework */; };
+		2C3A86F02271511900564D29 /* Drinkathon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A86EE2271511900564D29 /* Drinkathon.xcdatamodeld */; };
 		2C7CA009226D45F8006256BD /* red_solo_cup_burned.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C7CA008226D45F8006256BD /* red_solo_cup_burned.png */; };
 		2CA68EF32268378C008AA4FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA68EF22268378C008AA4FF /* AppDelegate.swift */; };
 		2CA68EF52268378C008AA4FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA68EF42268378C008AA4FF /* ViewController.swift */; };
@@ -99,6 +101,8 @@
 		2C3A86C022713B9E00564D29 /* GBC_icon_set.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GBC_icon_set.ai; sourceTree = "<group>"; };
 		2C3A86C122713B9E00564D29 /* GBC_icon_set.eps */ = {isa = PBXFileReference; lastKnownFileType = file; path = GBC_icon_set.eps; sourceTree = "<group>"; };
 		2C3A86C8227140AB00564D29 /* UserLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLog.swift; sourceTree = "<group>"; };
+		2C3A86CB22714F7000564D29 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2C3A86EF2271511900564D29 /* Drinkathon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Drinkathon.xcdatamodel; sourceTree = "<group>"; };
 		2C7CA008226D45F8006256BD /* red_solo_cup_burned.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_solo_cup_burned.png; sourceTree = "<group>"; };
 		2CA68EEF2268378C008AA4FF /* Drinkathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drinkathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA68EF22268378C008AA4FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C3A86CC22714F7000564D29 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,9 +181,25 @@
 			path = glasses_bottles_cups;
 			sourceTree = "<group>";
 		};
+		2C3A86CA22714F7000564D29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C3A86CB22714F7000564D29 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C3A86F2227152E900564D29 /* AppData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppData;
+			sourceTree = "<group>";
+		};
 		2CA68EE62268378C008AA4FF = {
 			isa = PBXGroup;
 			children = (
+				2C3A86F2227152E900564D29 /* AppData */,
 				2CFBD74B226A7D9C005A5196 /* CustomView */,
 				2CA68EF12268378C008AA4FF /* Drinkathon */,
 				2CA68F062268378C008AA4FF /* DrinkathonTests */,
@@ -187,6 +208,7 @@
 				2CA68F2A2268378D008AA4FF /* Drinkathon WatchKit Extension */,
 				2CA68EF02268378C008AA4FF /* Products */,
 				2CFBD741226925F6005A5196 /* Media Content */,
+				2C3A86CA22714F7000564D29 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -214,6 +236,7 @@
 				2CFBD73F2268F3A1005A5196 /* UserDefaults.swift */,
 				2CFBD74422692672005A5196 /* TrackingViewController.swift */,
 				2C3A86C8227140AB00564D29 /* UserLog.swift */,
+				2C3A86EE2271511900564D29 /* Drinkathon.xcdatamodeld */,
 			);
 			path = Drinkathon;
 			sourceTree = "<group>";
@@ -481,6 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C3A86C9227140AB00564D29 /* UserLog.swift in Sources */,
+				2C3A86F02271511900564D29 /* Drinkathon.xcdatamodeld in Sources */,
 				2CA68EF52268378C008AA4FF /* ViewController.swift in Sources */,
 				2CFBD74522692672005A5196 /* TrackingViewController.swift in Sources */,
 				2CA68EF32268378C008AA4FF /* AppDelegate.swift in Sources */,
@@ -943,6 +967,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2C3A86EE2271511900564D29 /* Drinkathon.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2C3A86EF2271511900564D29 /* Drinkathon.xcdatamodel */,
+			);
+			currentVersion = 2C3A86EF2271511900564D29 /* Drinkathon.xcdatamodel */;
+			path = Drinkathon.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2CA68EE72268378C008AA4FF /* Project object */;
 }
