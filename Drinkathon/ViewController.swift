@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     let genderPickerData : [String] = ["Male","Female"]
     //Male: 0, Female: 1
     static var gender : Int = 0
+    var genderDidSelect = false
     
     
     //Weight
@@ -53,7 +54,8 @@ class ViewController: UIViewController {
         weightInputTextField.inputView = weightPicker
         weightInputTextField.inputAccessoryView = toolBar
        
-        
+        let user = userProfile(name: "John", gender: "Male", weight: 150, tipsy: 1, blackOut: 1)
+        user.changeName(name: "bob")
     }
     
     
@@ -184,6 +186,7 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
         if pickerView == genderPicker{
             genderInputTextField.text = genderPickerData[row]
         } else if pickerView == weightPicker{

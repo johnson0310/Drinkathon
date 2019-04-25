@@ -63,10 +63,10 @@ class TrackingViewController: UIViewController {
         secondScreenInitialization()
         
         
-        
     }
     
 
+    
     //Initialize all fields on second screen
     func secondScreenInitialization() {
         

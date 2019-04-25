@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C3A86C222713B9E00564D29 /* License and Author Info.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2C3A86BE22713B9E00564D29 /* License and Author Info.pdf */; };
+		2C3A86C322713B9E00564D29 /* GBC_icon_set.svg in Resources */ = {isa = PBXBuildFile; fileRef = 2C3A86BF22713B9E00564D29 /* GBC_icon_set.svg */; };
+		2C3A86C422713B9E00564D29 /* GBC_icon_set.ai in Resources */ = {isa = PBXBuildFile; fileRef = 2C3A86C022713B9E00564D29 /* GBC_icon_set.ai */; };
+		2C3A86C522713B9E00564D29 /* GBC_icon_set.eps in Resources */ = {isa = PBXBuildFile; fileRef = 2C3A86C122713B9E00564D29 /* GBC_icon_set.eps */; };
+		2C3A86C9227140AB00564D29 /* UserLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A86C8227140AB00564D29 /* UserLog.swift */; };
 		2C7CA009226D45F8006256BD /* red_solo_cup_burned.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C7CA008226D45F8006256BD /* red_solo_cup_burned.png */; };
 		2CA68EF32268378C008AA4FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA68EF22268378C008AA4FF /* AppDelegate.swift */; };
 		2CA68EF52268378C008AA4FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA68EF42268378C008AA4FF /* ViewController.swift */; };
@@ -89,6 +94,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2C3A86BE22713B9E00564D29 /* License and Author Info.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "License and Author Info.pdf"; sourceTree = "<group>"; };
+		2C3A86BF22713B9E00564D29 /* GBC_icon_set.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = GBC_icon_set.svg; sourceTree = "<group>"; };
+		2C3A86C022713B9E00564D29 /* GBC_icon_set.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GBC_icon_set.ai; sourceTree = "<group>"; };
+		2C3A86C122713B9E00564D29 /* GBC_icon_set.eps */ = {isa = PBXFileReference; lastKnownFileType = file; path = GBC_icon_set.eps; sourceTree = "<group>"; };
+		2C3A86C8227140AB00564D29 /* UserLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLog.swift; sourceTree = "<group>"; };
 		2C7CA008226D45F8006256BD /* red_solo_cup_burned.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_solo_cup_burned.png; sourceTree = "<group>"; };
 		2CA68EEF2268378C008AA4FF /* Drinkathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drinkathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA68EF22268378C008AA4FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +165,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C3A86BD22713B9E00564D29 /* glasses_bottles_cups */ = {
+			isa = PBXGroup;
+			children = (
+				2C3A86BE22713B9E00564D29 /* License and Author Info.pdf */,
+				2C3A86BF22713B9E00564D29 /* GBC_icon_set.svg */,
+				2C3A86C022713B9E00564D29 /* GBC_icon_set.ai */,
+				2C3A86C122713B9E00564D29 /* GBC_icon_set.eps */,
+			);
+			path = glasses_bottles_cups;
+			sourceTree = "<group>";
+		};
 		2CA68EE62268378C008AA4FF = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +213,7 @@
 				2CA68EFE2268378C008AA4FF /* Info.plist */,
 				2CFBD73F2268F3A1005A5196 /* UserDefaults.swift */,
 				2CFBD74422692672005A5196 /* TrackingViewController.swift */,
+				2C3A86C8227140AB00564D29 /* UserLog.swift */,
 			);
 			path = Drinkathon;
 			sourceTree = "<group>";
@@ -240,6 +262,7 @@
 		2CFBD741226925F6005A5196 /* Media Content */ = {
 			isa = PBXGroup;
 			children = (
+				2C3A86BD22713B9E00564D29 /* glasses_bottles_cups */,
 				2CFBD748226A7533005A5196 /* foamed_beer_background.jpg */,
 				2CFBD742226925F6005A5196 /* red_solo_cup.jpg */,
 				2CFBD746226947F0005A5196 /* first_scene_button.JPG */,
@@ -405,7 +428,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C3A86C422713B9E00564D29 /* GBC_icon_set.ai in Resources */,
+				2C3A86C322713B9E00564D29 /* GBC_icon_set.svg in Resources */,
+				2C3A86C222713B9E00564D29 /* License and Author Info.pdf in Resources */,
 				2C7CA009226D45F8006256BD /* red_solo_cup_burned.png in Resources */,
+				2C3A86C522713B9E00564D29 /* GBC_icon_set.eps in Resources */,
 				2CA68EFD2268378C008AA4FF /* LaunchScreen.storyboard in Resources */,
 				2CFBD749226A7533005A5196 /* foamed_beer_background.jpg in Resources */,
 				2CA68EFA2268378C008AA4FF /* Assets.xcassets in Resources */,
@@ -453,6 +480,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C3A86C9227140AB00564D29 /* UserLog.swift in Sources */,
 				2CA68EF52268378C008AA4FF /* ViewController.swift in Sources */,
 				2CFBD74522692672005A5196 /* TrackingViewController.swift in Sources */,
 				2CA68EF32268378C008AA4FF /* AppDelegate.swift in Sources */,
