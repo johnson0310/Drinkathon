@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2C06C6912271703300B41935 /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C06C6902271703300B41935 /* WelcomeScreenViewController.swift */; };
+		2C06C69722717C7000B41935 /* welcomeScreen_background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C06C69522717C7000B41935 /* welcomeScreen_background2.jpg */; };
+		2C06C69822717C7000B41935 /* welcomeScreen_background1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C06C69622717C7000B41935 /* welcomeScreen_background1.jpg */; };
 		2C3A86C222713B9E00564D29 /* License and Author Info.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2C3A86BE22713B9E00564D29 /* License and Author Info.pdf */; };
 		2C3A86C322713B9E00564D29 /* GBC_icon_set.svg in Resources */ = {isa = PBXBuildFile; fileRef = 2C3A86BF22713B9E00564D29 /* GBC_icon_set.svg */; };
 		2C3A86C422713B9E00564D29 /* GBC_icon_set.ai in Resources */ = {isa = PBXBuildFile; fileRef = 2C3A86C022713B9E00564D29 /* GBC_icon_set.ai */; };
@@ -20,7 +22,7 @@
 		2C3A86F822716CC800564D29 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A86F622716CC800564D29 /* User+CoreDataProperties.swift */; };
 		2C7CA009226D45F8006256BD /* red_solo_cup_burned.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C7CA008226D45F8006256BD /* red_solo_cup_burned.png */; };
 		2CA68EF32268378C008AA4FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA68EF22268378C008AA4FF /* AppDelegate.swift */; };
-		2CA68EF52268378C008AA4FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA68EF42268378C008AA4FF /* ViewController.swift */; };
+		2CA68EF52268378C008AA4FF /* ProfileCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA68EF42268378C008AA4FF /* ProfileCreationViewController.swift */; };
 		2CA68EF82268378C008AA4FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA68EF62268378C008AA4FF /* Main.storyboard */; };
 		2CA68EFA2268378C008AA4FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA68EF92268378C008AA4FF /* Assets.xcassets */; };
 		2CA68EFD2268378C008AA4FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA68EFB2268378C008AA4FF /* LaunchScreen.storyboard */; };
@@ -101,6 +103,8 @@
 
 /* Begin PBXFileReference section */
 		2C06C6902271703300B41935 /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
+		2C06C69522717C7000B41935 /* welcomeScreen_background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = welcomeScreen_background2.jpg; sourceTree = "<group>"; };
+		2C06C69622717C7000B41935 /* welcomeScreen_background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = welcomeScreen_background1.jpg; sourceTree = "<group>"; };
 		2C3A86BE22713B9E00564D29 /* License and Author Info.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "License and Author Info.pdf"; sourceTree = "<group>"; };
 		2C3A86BF22713B9E00564D29 /* GBC_icon_set.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = GBC_icon_set.svg; sourceTree = "<group>"; };
 		2C3A86C022713B9E00564D29 /* GBC_icon_set.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GBC_icon_set.ai; sourceTree = "<group>"; };
@@ -114,7 +118,7 @@
 		2C7CA008226D45F8006256BD /* red_solo_cup_burned.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_solo_cup_burned.png; sourceTree = "<group>"; };
 		2CA68EEF2268378C008AA4FF /* Drinkathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drinkathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA68EF22268378C008AA4FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2CA68EF42268378C008AA4FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2CA68EF42268378C008AA4FF /* ProfileCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCreationViewController.swift; sourceTree = "<group>"; };
 		2CA68EF72268378C008AA4FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2CA68EF92268378C008AA4FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CA68EFC2268378C008AA4FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -178,6 +182,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C06C6922271782000B41935 /* WelcomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2C06C69622717C7000B41935 /* welcomeScreen_background1.jpg */,
+				2C06C69522717C7000B41935 /* welcomeScreen_background2.jpg */,
+			);
+			path = WelcomeScreen;
+			sourceTree = "<group>";
+		};
 		2C3A86BD22713B9E00564D29 /* glasses_bottles_cups */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,7 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				2CA68EF22268378C008AA4FF /* AppDelegate.swift */,
-				2CA68EF42268378C008AA4FF /* ViewController.swift */,
+				2CA68EF42268378C008AA4FF /* ProfileCreationViewController.swift */,
 				2CA68EF62268378C008AA4FF /* Main.storyboard */,
 				2CA68EF92268378C008AA4FF /* Assets.xcassets */,
 				2CA68EFB2268378C008AA4FF /* LaunchScreen.storyboard */,
@@ -297,6 +310,7 @@
 		2CFBD741226925F6005A5196 /* Media Content */ = {
 			isa = PBXGroup;
 			children = (
+				2C06C6922271782000B41935 /* WelcomeScreen */,
 				2C3A86BD22713B9E00564D29 /* glasses_bottles_cups */,
 				2CFBD748226A7533005A5196 /* foamed_beer_background.jpg */,
 				2CFBD742226925F6005A5196 /* red_solo_cup.jpg */,
@@ -464,10 +478,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C3A86C422713B9E00564D29 /* GBC_icon_set.ai in Resources */,
+				2C06C69822717C7000B41935 /* welcomeScreen_background1.jpg in Resources */,
 				2C3A86C322713B9E00564D29 /* GBC_icon_set.svg in Resources */,
 				2C3A86C222713B9E00564D29 /* License and Author Info.pdf in Resources */,
 				2C7CA009226D45F8006256BD /* red_solo_cup_burned.png in Resources */,
 				2C3A86C522713B9E00564D29 /* GBC_icon_set.eps in Resources */,
+				2C06C69722717C7000B41935 /* welcomeScreen_background2.jpg in Resources */,
 				2CA68EFD2268378C008AA4FF /* LaunchScreen.storyboard in Resources */,
 				2CFBD749226A7533005A5196 /* foamed_beer_background.jpg in Resources */,
 				2CA68EFA2268378C008AA4FF /* Assets.xcassets in Resources */,
@@ -517,7 +533,7 @@
 			files = (
 				2C3A86C9227140AB00564D29 /* UserLog.swift in Sources */,
 				2C3A86F02271511900564D29 /* Drinkathon.xcdatamodeld in Sources */,
-				2CA68EF52268378C008AA4FF /* ViewController.swift in Sources */,
+				2CA68EF52268378C008AA4FF /* ProfileCreationViewController.swift in Sources */,
 				2CFBD74522692672005A5196 /* TrackingViewController.swift in Sources */,
 				2C3A86F722716CC800564D29 /* User+CoreDataClass.swift in Sources */,
 				2C06C6912271703300B41935 /* WelcomeScreenViewController.swift in Sources */,

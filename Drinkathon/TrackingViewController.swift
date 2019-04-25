@@ -25,8 +25,8 @@ class TrackingViewController: UIViewController {
     var currentTime = Int()
     
     //Body parameter
-    let gender = ViewController.gender
-    let weight = ViewController.weight
+    let gender = ProfileCreationViewController.gender
+    let weight = ProfileCreationViewController.weight
     
     //Image
     @IBOutlet weak var addDrink: UIImageView!

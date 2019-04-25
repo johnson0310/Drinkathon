@@ -26,9 +26,9 @@ class SATextField: UITextField {
         tintColor             = .white
         textColor             = .darkGray
         font                  = UIFont(name: "avenirNextCondensed-DemiBold", size: 18)
-        backgroundColor       = UIColor(white: 1.0, alpha: 0.5)
+        backgroundColor       = UIColor(white: 1.0, alpha: 0.8)
         autocorrectionType    = .no
-        layer.cornerRadius    = 25.0
+        layer.cornerRadius    = 20.0
         clipsToBounds         = true
         
         let placeholder       = self.placeholder != nil ? self.placeholder! : ""
