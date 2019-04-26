@@ -23,13 +23,14 @@ class WelcomeScreenViewController: UIViewController {
     
     //Debug
     @IBOutlet weak var jumpToMain: UIButton!
-    
+    var testUser : userProfile!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
         WelcomeScreenViewControllerInit()
+        var testUser = userProfile(name: "John", age: 21, gender: 0, weight: 155, tipsy: 9999, blackOut: 9999)
     }
     
     
@@ -59,6 +60,15 @@ class WelcomeScreenViewController: UIViewController {
     @objc func getStartedAction() {
         performSegue(withIdentifier: "welcomeScreen-profileCreation", sender: nil)
         print("Get started button tapped, going to profile creation scene")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "debugSeagueToMain"{
+            if let middleVC = segue.destination as? UITabBarController {
+                let destVC = middleVC.viewControllers?.first as? AddDrinkViewController
+                destVC?.user = self.testUser
+            }
+        }
     }
     
 }

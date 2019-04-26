@@ -22,6 +22,7 @@
 		2C3A86F822716CC800564D29 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A86F622716CC800564D29 /* User+CoreDataProperties.swift */; };
 		2C71B33B22726BD20004EB44 /* AddDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C71B33A22726BD20004EB44 /* AddDrinkViewController.swift */; };
 		2C71B33D22728D480004EB44 /* AddDrinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C71B33C22728D480004EB44 /* AddDrinkButton.swift */; };
+		2C71B33F2272A41D0004EB44 /* DrinkEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C71B33E2272A41D0004EB44 /* DrinkEvent.swift */; };
 		2C7CA009226D45F8006256BD /* red_solo_cup_burned.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C7CA008226D45F8006256BD /* red_solo_cup_burned.png */; };
 		2CA68EF32268378C008AA4FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA68EF22268378C008AA4FF /* AppDelegate.swift */; };
 		2CA68EF52268378C008AA4FF /* ProfileCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA68EF42268378C008AA4FF /* ProfileCreationViewController.swift */; };
@@ -119,6 +120,7 @@
 		2C3A86F622716CC800564D29 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2C71B33A22726BD20004EB44 /* AddDrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDrinkViewController.swift; sourceTree = "<group>"; };
 		2C71B33C22728D480004EB44 /* AddDrinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDrinkButton.swift; sourceTree = "<group>"; };
+		2C71B33E2272A41D0004EB44 /* DrinkEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkEvent.swift; sourceTree = "<group>"; };
 		2C7CA008226D45F8006256BD /* red_solo_cup_burned.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_solo_cup_burned.png; sourceTree = "<group>"; };
 		2CA68EEF2268378C008AA4FF /* Drinkathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drinkathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA68EF22268378C008AA4FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				2C3A86F32271693A00564D29 /* PersistenceService.swift */,
 				2C06C6902271703300B41935 /* WelcomeScreenViewController.swift */,
 				2C71B33A22726BD20004EB44 /* AddDrinkViewController.swift */,
+				2C71B33E2272A41D0004EB44 /* DrinkEvent.swift */,
 			);
 			path = Drinkathon;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				2C71B33B22726BD20004EB44 /* AddDrinkViewController.swift in Sources */,
 				2CFBD74E226A7DBB005A5196 /* SubmitButton.swift in Sources */,
 				2C3A86F42271693A00564D29 /* PersistenceService.swift in Sources */,
+				2C71B33F2272A41D0004EB44 /* DrinkEvent.swift in Sources */,
 				2C71B33D22728D480004EB44 /* AddDrinkButton.swift in Sources */,
 				2CFBD74F226A7DBB005A5196 /* SATextField.swift in Sources */,
 			);

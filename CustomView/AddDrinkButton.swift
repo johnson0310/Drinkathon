@@ -24,7 +24,7 @@ class AddDrinkButton: UIButton {
     
     private func setupButton() {
         backgroundColor     = UIColor(red: 243/255, green: 129/255, blue: 129/255, alpha: 1)
-        titleLabel?.font    = UIFont(name: "avenirNextCondensedDemiBold", size: 22)
+        titleLabel?.font    = UIFont(name: "avenirNextCondensedDemiBold", size: 53)
         layer.cornerRadius  = frame.size.height/2
         setTitleColor(.white, for: .normal)
     }

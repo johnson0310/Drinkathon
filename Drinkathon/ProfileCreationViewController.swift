@@ -126,6 +126,7 @@ class ProfileCreationViewController: UIViewController {
         
     }
     
+    //Prepare the data for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "profileCreation-mainScreen"{
             if let middleVC = segue.destination as? UITabBarController {

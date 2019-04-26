@@ -16,6 +16,8 @@ class SubmitButton: UIButton {
     
     
     private func setupButton() {
+        titleLabel?.numberOfLines = 0
+        titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
         backgroundColor     = UIColor(red: 21/255, green: 205/255, blue: 168/255, alpha: 1)
         titleLabel?.font    = UIFont(name: "avenirNextCondensedDemiBold", size: 22)
         layer.cornerRadius  = frame.size.height/2
