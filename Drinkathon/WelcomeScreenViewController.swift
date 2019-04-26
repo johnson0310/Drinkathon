@@ -21,7 +21,8 @@ class WelcomeScreenViewController: UIViewController {
     @IBOutlet weak var quote: UILabel!
     @IBOutlet weak var getStarted: SubmitButton!
     
-    
+    //Debug
+    @IBOutlet weak var jumpToMain: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +48,11 @@ class WelcomeScreenViewController: UIViewController {
         backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         backgroundImageView.image = UIImage(named: "welcomeScreen_background1.jpg")
         view.sendSubviewToBack(backgroundImageView)
+        
+        
+        //Debug button
+        //jumpToMain.addTarget(self, action: #selector(jumpAction), for: .touchUpInside)
+        
     
     }
     
@@ -54,5 +60,5 @@ class WelcomeScreenViewController: UIViewController {
         performSegue(withIdentifier: "welcomeScreen-profileCreation", sender: nil)
         print("Get started button tapped, going to profile creation scene")
     }
-
+    
 }

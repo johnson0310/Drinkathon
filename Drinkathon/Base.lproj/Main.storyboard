@@ -44,6 +44,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Get Started"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6B-MM-o3W">
+                                <rect key="frame" x="161" y="824" width="93" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Jump to main"/>
+                                <connections>
+                                    <segue destination="z6t-i6-vs0" kind="presentation" id="54v-SA-96q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="HB1-I7-yx6"/>
@@ -51,9 +59,11 @@
                     <connections>
                         <outlet property="backgroundDebug" destination="fJa-Lo-u61" id="fTZ-r5-rIG"/>
                         <outlet property="getStarted" destination="eYz-DY-Iiq" id="p6k-Bk-B9J"/>
+                        <outlet property="jumpToMain" destination="U6B-MM-o3W" id="9T4-jo-c3J"/>
                         <outlet property="logo" destination="fFZ-n6-lw7" id="rwS-DK-Tr3"/>
                         <outlet property="quote" destination="5Hc-GZ-wMM" id="oGM-Rh-Xo4"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="welcomeScreen-profileCreation" id="Wbx-tb-xsT"/>
+                        <segue destination="z6t-i6-vs0" kind="presentation" id="hj8-1e-zg4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dsc-gu-fqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -131,13 +141,14 @@
                         <outlet property="nameInputTextField" destination="hOG-2q-vFI" id="tnR-Ef-RDt"/>
                         <outlet property="submitButton" destination="5SY-Yb-bPB" id="n3m-s4-54Z"/>
                         <outlet property="weightInputTextField" destination="eUc-v7-jIr" id="9OT-BW-NTw"/>
+                        <segue destination="27E-bo-pi0" kind="presentation" identifier="profileCreation-mainScreen" id="NoV-MP-yVe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="134.78260869565219" y="20.758928571428569"/>
         </scene>
-        <!--Item-->
+        <!--Setting-->
         <scene sceneID="Tbg-xb-Lyn">
             <objects>
                 <viewController id="5aS-qd-J5v" customClass="TrackingViewController" customModule="Drinkathon" customModuleProvider="target" sceneMemberID="viewController">
@@ -233,7 +244,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mps-NJ-U11"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="3ck-2W-eNa"/>
+                    <tabBarItem key="tabBarItem" title="Setting" id="3ck-2W-eNa"/>
                     <connections>
                         <outlet property="addDrink" destination="lEm-da-S94" id="ohG-12-l0U"/>
                         <outlet property="bacLevelLable" destination="j2N-T5-nUe" id="371-rb-AKx"/>
@@ -245,7 +256,7 @@
             </objects>
             <point key="canvasLocation" x="1923" y="668"/>
         </scene>
-        <!--Item 2-->
+        <!--Stats-->
         <scene sceneID="DxI-NA-J08">
             <objects>
                 <viewController id="Fj5-3H-4zA" sceneMemberID="viewController">
@@ -255,28 +266,39 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ate-0s-AuA"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="vxx-vm-exO"/>
+                    <tabBarItem key="tabBarItem" title="Stats" id="vxx-vm-exO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QSo-UJ-6br" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1923" y="23"/>
         </scene>
-        <!--Item 1-->
+        <!--Add Drinks-->
         <scene sceneID="WRP-Bz-vAe">
             <objects>
-                <viewController id="z6t-i6-vs0" sceneMemberID="viewController">
+                <viewController id="z6t-i6-vs0" customClass="AddDrinkViewController" customModule="Drinkathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MSF-dV-OeA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="y35-yu-Wgb" customClass="AddDrinkButton" customModule="Drinkathon" customModuleProvider="target">
+                                <rect key="frame" x="56" y="194" width="289" height="293"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="53"/>
+                                <state key="normal" title="Add 1 Standard Drink"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <accessibility key="accessibilityConfiguration" label="asdf"/>
                         <viewLayoutGuide key="safeArea" id="PK5-wL-Uka"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Gkt-0h-Z4m"/>
+                    <tabBarItem key="tabBarItem" title="Add Drinks" id="Gkt-0h-Z4m"/>
+                    <connections>
+                        <outlet property="addOneStandardDrink" destination="y35-yu-Wgb" id="qJr-xP-g8b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GpA-Hn-IWo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1923" y="-625"/>
+            <point key="canvasLocation" x="1921.7391304347827" y="-625.44642857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zUI-is-Shu">
@@ -301,4 +323,7 @@
     <resources>
         <image name="welcomeScreen_background1.jpg" width="1728" height="3072"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="hj8-1e-zg4"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -11,7 +11,7 @@ import UIKit
 class ProfileCreationViewController: UIViewController {
     
 
-    /*Variables for main screen*/
+    /*Variables Declaration*/
     //User log object
     var user : userProfile?
     //Name
@@ -56,10 +56,6 @@ class ProfileCreationViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         ProfileCreationViewControllerInit()
-        
-        
-        let user = userProfile(name: "John", age: 21, gender: 0, weight: 150, tipsy: 1, blackOut: 1)
-        user.setName(name: "bob")
     }
 
     
@@ -115,9 +111,7 @@ class ProfileCreationViewController: UIViewController {
         linkInputComponentsToTextFields()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
-    }
+    
     
     //Check if all textfields are completed and regulated
     @objc func submitButtonAction() {
@@ -128,10 +122,23 @@ class ProfileCreationViewController: UIViewController {
             incompleteAlert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
             self.present(incompleteAlert, animated: true)
         }
+        performSegue(withIdentifier: "profileCreation-mainScreen", sender: nil)
+        
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "profileCreation-mainScreen"{
+            if let middleVC = segue.destination as? UITabBarController {
+                let destVC = middleVC.viewControllers?.first as? AddDrinkViewController
+                destVC?.user = self.user
+            }
+        }
+        
+    }
+    
+    
     @objc func debugButton1() {
-        performSegue(withIdentifier: "first_to_second", sender: nil)
+        performSegue(withIdentifier: "profileCreation-mainScreen", sender: nil)
     }
     
     
