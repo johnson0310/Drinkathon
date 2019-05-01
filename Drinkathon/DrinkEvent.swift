@@ -9,13 +9,17 @@
 import Foundation
 
 class DrinkEvent {
-    private var numDrinks = 0.0
-    private var timeSinceFirstDrink = 0
-    private var currentBAC = 0.0
-    private var singleDrinkCalorie = 0
-    private var totalCalories = 0.0
+    var numDrinks = 0.0
+    var timeStartedDrinking = 0
+    var timeSinceFirstDrink = 0
+    var currentBAC = 0.0
+    var totalCalories = 0.0
+    var drinksHad = [Drinks]()
     
     init() {}
+    
+    func addDrinks (newDrink: Drinks){
+    }
     
     func updateBAC(drinkVolume: Double, sex: Int, weight: Int, timeSinceFirst: Double) {
         var ratio = Double()

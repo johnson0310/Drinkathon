@@ -54,8 +54,8 @@ class WelcomeScreenViewController: UIViewController {
         //Debug button
         //jumpToMain.addTarget(self, action: #selector(jumpAction), for: .touchUpInside)
         
-        var c = Wine()
-        print(c.description)
+        var c = Spirits(alcPercentage: 40, volume: 3)
+        print(c.standardDrink)
         
     }
     

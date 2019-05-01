@@ -9,10 +9,14 @@
 import Foundation
 
 class Drinks {
+    //1 fl oz = 29.5735 ml
+    let ozToMl = 29.5735
+    
     var alcPercentage : Double
     //Volume is in fl oz
     var volume : Double
     var calories : Double
+    var standardDrink : Double
     var description : String {
         return"""
         Main drinks class, with defult parameters:
@@ -26,8 +30,12 @@ class Drinks {
         alcPercentage = 40.0
         volume = 1.5
         calories = 100
+        standardDrink = 1.0
     }
     
+    func calculateNumStandarDrink(alcPercentage: Double, volume: Double) -> Double {
+        return self.volume * ozToMl * alcPercentage / 100 * 0.789 / 14
+    }
 }
 
 
@@ -53,6 +61,7 @@ class Beer : Drinks {
         This Beer has:
         Alchohol Percentage: \(alcPercentage)
         Volume: \(volume)
+        Number of Standard Drink: \(standardDrink)
         Calories: \(calories)
         """
     }
@@ -64,6 +73,7 @@ class Beer : Drinks {
         self.alcPercentage = 5.0
         self.volume = 12.0
         self.calories = calorieCalculation(alcPercentage: self.alcPercentage, volume: self.volume)
+        self.standardDrink = calculateNumStandarDrink(alcPercentage: self.alcPercentage, volume: self.volume).rounded(toPlaces: 2)
     }
     
     //Init for custum beer
@@ -72,6 +82,7 @@ class Beer : Drinks {
         self.alcPercentage = alcPercentage
         self.volume = volume
         self.calories = calorieCalculation(alcPercentage: self.alcPercentage, volume: self.volume)
+        self.standardDrink = calculateNumStandarDrink(alcPercentage: self.alcPercentage, volume: self.volume).rounded(toPlaces: 2)
     }
     
     //Beer: Estimate the calories in the beer from ALC% and volume
@@ -97,6 +108,7 @@ class IPA : Drinks {
         self.alcPercentage = alcPercentage
         self.volume = volume
         self.calories = calorieCalculation(alcPercentage: self.alcPercentage, volume: self.volume)
+        self.standardDrink = calculateNumStandarDrink(alcPercentage: self.alcPercentage, volume: self.volume).rounded(toPlaces: 2)
     }
     
     //IPA: Estimate the calories in the beer from ALC% and volume
@@ -123,6 +135,7 @@ class Wine : Drinks {
         self.alcPercentage = 12.5
         self.volume = 5.0
         self.calories = calorieCalculation(alcPercentage: self.alcPercentage, volume: self.volume)
+        self.standardDrink = calculateNumStandarDrink(alcPercentage: self.alcPercentage, volume: self.volume).rounded(toPlaces: 2)
     }
     
     //Init for custum beer
@@ -131,6 +144,7 @@ class Wine : Drinks {
         self.alcPercentage = alcPercentage
         self.volume = volume
         self.calories = calorieCalculation(alcPercentage: self.alcPercentage, volume: self.volume)
+        self.standardDrink = calculateNumStandarDrink(alcPercentage: self.alcPercentage, volume: self.volume).rounded(toPlaces: 2)
     }
     
     //Wine: Estimate the calories in the beer from ALC% and volume
@@ -158,6 +172,7 @@ class Champagne : Drinks {
         self.alcPercentage = 12.0
         self.volume = 5.0
         self.calories = calorieCalculation(alcPercentage: self.alcPercentage, volume: self.volume)
+        self.standardDrink = calculateNumStandarDrink(alcPercentage: self.alcPercentage, volume: self.volume).rounded(toPlaces: 2)
     }
     
     //Init for custum beer
@@ -166,6 +181,7 @@ class Champagne : Drinks {
         self.alcPercentage = alcPercentage
         self.volume = volume
         self.calories = calorieCalculation(alcPercentage: self.alcPercentage, volume: self.volume)
+        self.standardDrink = calculateNumStandarDrink(alcPercentage: self.alcPercentage, volume: self.volume).rounded(toPlaces: 2)
     }
     
     //Champagne: Estimate the calories in the beer from ALC% and volume
@@ -192,6 +208,7 @@ class Spirits : Drinks {
         self.alcPercentage = 40.0
         self.volume = 1.5
         self.calories = calorieCalculation(alcPercentage: self.alcPercentage, volume: self.volume)
+        self.standardDrink = calculateNumStandarDrink(alcPercentage: self.alcPercentage, volume: self.volume).rounded(toPlaces: 2)
     }
     
     //Init for custum beer
@@ -200,6 +217,7 @@ class Spirits : Drinks {
         self.alcPercentage = alcPercentage
         self.volume = volume
         self.calories = calorieCalculation(alcPercentage: self.alcPercentage, volume: self.volume)
+        self.standardDrink = calculateNumStandarDrink(alcPercentage: self.alcPercentage, volume: self.volume).rounded(toPlaces: 2)
     }
     
     //Champagne: Estimate the calories in the beer from ALC% and volume
@@ -219,4 +237,12 @@ class Spirits : Drinks {
         return volume * 64.0
     }
     
+}
+
+extension Double {
+    /// Rounds the double to decimal places value
+    func rounded(toPlaces places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
+    }
 }
