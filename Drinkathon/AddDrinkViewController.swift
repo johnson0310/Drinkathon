@@ -19,6 +19,12 @@ class AddDrinkViewController: UIViewController {
     @IBOutlet weak var addCustomDrinks: SubmitButton!
     @IBOutlet weak var addPreviousCustomDrink: UIButton!
     
+    //Amount of drinks label
+    @IBOutlet weak var amountOfDrinksText: UILabel!
+    @IBOutlet weak var drinkCounter: UILabel!
+    
+    //Target Progress Bar
+    @IBOutlet weak var drinkTargetProgress: UIProgressView!
     
     
     override func viewDidLoad() {
@@ -53,6 +59,8 @@ class AddDrinkViewController: UIViewController {
         addPreviousCustomDrink.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
         addPreviousCustomDrink.backgroundColor = UIColor(red:0.46, green:0.79, blue:0.76, alpha:1.0)
 
+        //Amount of drinks label
+        drinkTargetProgress.progress = 9/10
     }
     
 
