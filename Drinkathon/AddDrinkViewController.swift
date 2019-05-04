@@ -32,7 +32,7 @@ class AddDrinkViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         AddDrinkViewControllerInit()
-        
+        AddDrinkViewControllerButtonSetup()
     }
     
     func AddDrinkViewControllerInit() {
@@ -61,6 +61,10 @@ class AddDrinkViewController: UIViewController {
 
         //Amount of drinks label
         drinkTargetProgress.progress = 9/10
+    }
+    
+    func AddDrinkViewControllerButtonSetup() {
+        <#function body#>
     }
     
 

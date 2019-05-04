@@ -31,6 +31,12 @@ class WelcomeScreenViewController: UIViewController {
         
         WelcomeScreenViewControllerInit()
         var testUser = userProfile(name: "John", age: 21, gender: 0, weight: 155, tipsy: 9999, blackOut: 9999)
+        var newEvent = DrinkEvent(user: testUser)
+        let newDrink = Beer()
+        newEvent.addDrinks(newDrink: newDrink)
+        print(newEvent.currentBAC)
+        print(newEvent.drinksHad[0].timeWhenAdded)
+        
     }
     
     
@@ -54,8 +60,6 @@ class WelcomeScreenViewController: UIViewController {
         //Debug button
         //jumpToMain.addTarget(self, action: #selector(jumpAction), for: .touchUpInside)
         
-        var c = Spirits(alcPercentage: 40, volume: 3)
-        print(c.standardDrink)
         
     }
     

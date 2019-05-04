@@ -17,6 +17,7 @@ class Drinks {
     var volume : Double
     var calories : Double
     var standardDrink : Double
+    var timeWhenAdded : Int
     var description : String {
         return"""
         Main drinks class, with defult parameters:
@@ -31,20 +32,27 @@ class Drinks {
         volume = 1.5
         calories = 100
         standardDrink = 1.0
+        standardDrink = 1.0
+        timeWhenAdded = Int(CFAbsoluteTimeGetCurrent())
     }
     
     func calculateNumStandarDrink(alcPercentage: Double, volume: Double) -> Double {
         return self.volume * ozToMl * alcPercentage / 100 * 0.789 / 14
     }
+    
+    func getRoundedStandardDrink () -> Double {
+        return standardDrink.rounded(toPlaces: 2)
+    }
 }
 
 
-class StandardDrink : Drinks {
+class standardDrink : Drinks {
     override var description : String {
         return"""
         This Standard Drink has:
         Alchohol Percentage: \(alcPercentage)
         Volume: \(volume)
+        Number of Standard Drink: \(getRoundedStandardDrink())
         Calories: \(calories)
         """
     }
@@ -61,7 +69,7 @@ class Beer : Drinks {
         This Beer has:
         Alchohol Percentage: \(alcPercentage)
         Volume: \(volume)
-        Number of Standard Drink: \(standardDrink)
+        Number of Standard Drink: \(getRoundedStandardDrink())
         Calories: \(calories)
         """
     }
@@ -73,7 +81,8 @@ class Beer : Drinks {
         self.alcPercentage = 5.0
         self.volume = 12.0
         self.calories = calorieCalculation(alcPercentage: self.alcPercentage, volume: self.volume)
-        self.standardDrink = calculateNumStandarDrink(alcPercentage: self.alcPercentage, volume: self.volume).rounded(toPlaces: 2)
+        self.standardDrink = calculateNumStandarDrink(alcPercentage: self.alcPercentage, volume: self.volume)
+        timeWhenAdded = Int(CFAbsoluteTimeGetCurrent())
     }
     
     //Init for custum beer
@@ -83,6 +92,7 @@ class Beer : Drinks {
         self.volume = volume
         self.calories = calorieCalculation(alcPercentage: self.alcPercentage, volume: self.volume)
         self.standardDrink = calculateNumStandarDrink(alcPercentage: self.alcPercentage, volume: self.volume).rounded(toPlaces: 2)
+        timeWhenAdded = Int(CFAbsoluteTimeGetCurrent())
     }
     
     //Beer: Estimate the calories in the beer from ALC% and volume
@@ -98,6 +108,7 @@ class IPA : Drinks {
         This IPA has:
         Alchohol Percentage: \(alcPercentage)
         Volume: \(volume)
+        Number of Standard Drink: \(getRoundedStandardDrink())
         Calories: \(calories)
         """
     }
@@ -109,6 +120,7 @@ class IPA : Drinks {
         self.volume = volume
         self.calories = calorieCalculation(alcPercentage: self.alcPercentage, volume: self.volume)
         self.standardDrink = calculateNumStandarDrink(alcPercentage: self.alcPercentage, volume: self.volume).rounded(toPlaces: 2)
+        timeWhenAdded = Int(CFAbsoluteTimeGetCurrent())
     }
     
     //IPA: Estimate the calories in the beer from ALC% and volume
@@ -124,6 +136,7 @@ class Wine : Drinks {
         This Wine has:
         Alchohol Percentage: \(alcPercentage)
         Volume: \(volume)
+        Number of Standard Drink: \(getRoundedStandardDrink())
         Calories: \(calories)
         """
     }
@@ -136,6 +149,7 @@ class Wine : Drinks {
         self.volume = 5.0
         self.calories = calorieCalculation(alcPercentage: self.alcPercentage, volume: self.volume)
         self.standardDrink = calculateNumStandarDrink(alcPercentage: self.alcPercentage, volume: self.volume).rounded(toPlaces: 2)
+        timeWhenAdded = Int(CFAbsoluteTimeGetCurrent())
     }
     
     //Init for custum beer
@@ -145,6 +159,7 @@ class Wine : Drinks {
         self.volume = volume
         self.calories = calorieCalculation(alcPercentage: self.alcPercentage, volume: self.volume)
         self.standardDrink = calculateNumStandarDrink(alcPercentage: self.alcPercentage, volume: self.volume).rounded(toPlaces: 2)
+        timeWhenAdded = Int(CFAbsoluteTimeGetCurrent())
     }
     
     //Wine: Estimate the calories in the beer from ALC% and volume
@@ -161,6 +176,7 @@ class Champagne : Drinks {
         This Champagne has:
         Alchohol Percentage: \(alcPercentage)
         Volume: \(volume)
+        Number of Standard Drink: \(getRoundedStandardDrink())
         Calories: \(calories)
         """
     }
@@ -173,6 +189,7 @@ class Champagne : Drinks {
         self.volume = 5.0
         self.calories = calorieCalculation(alcPercentage: self.alcPercentage, volume: self.volume)
         self.standardDrink = calculateNumStandarDrink(alcPercentage: self.alcPercentage, volume: self.volume).rounded(toPlaces: 2)
+        timeWhenAdded = Int(CFAbsoluteTimeGetCurrent())
     }
     
     //Init for custum beer
@@ -182,6 +199,7 @@ class Champagne : Drinks {
         self.volume = volume
         self.calories = calorieCalculation(alcPercentage: self.alcPercentage, volume: self.volume)
         self.standardDrink = calculateNumStandarDrink(alcPercentage: self.alcPercentage, volume: self.volume).rounded(toPlaces: 2)
+        timeWhenAdded = Int(CFAbsoluteTimeGetCurrent())
     }
     
     //Champagne: Estimate the calories in the beer from ALC% and volume
@@ -197,6 +215,7 @@ class Spirits : Drinks {
         This Spirit has:
         Alchohol Percentage: \(alcPercentage)
         Volume: \(volume)
+        Number of Standard Drink: \(getRoundedStandardDrink())
         Calories: \(calories)
         """
     }
@@ -209,6 +228,7 @@ class Spirits : Drinks {
         self.volume = 1.5
         self.calories = calorieCalculation(alcPercentage: self.alcPercentage, volume: self.volume)
         self.standardDrink = calculateNumStandarDrink(alcPercentage: self.alcPercentage, volume: self.volume).rounded(toPlaces: 2)
+        timeWhenAdded = Int(CFAbsoluteTimeGetCurrent())
     }
     
     //Init for custum beer
@@ -218,6 +238,7 @@ class Spirits : Drinks {
         self.volume = volume
         self.calories = calorieCalculation(alcPercentage: self.alcPercentage, volume: self.volume)
         self.standardDrink = calculateNumStandarDrink(alcPercentage: self.alcPercentage, volume: self.volume).rounded(toPlaces: 2)
+        timeWhenAdded = Int(CFAbsoluteTimeGetCurrent())
     }
     
     //Champagne: Estimate the calories in the beer from ALC% and volume
