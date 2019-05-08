@@ -23,6 +23,7 @@ class WelcomeScreenViewController: UIViewController {
     
     //Debug
     @IBOutlet weak var jumpToMain: UIButton!
+    @IBOutlet weak var debug: UIButton!
     var testUser : userProfile!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +31,21 @@ class WelcomeScreenViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         WelcomeScreenViewControllerInit()
+        
+        /* Debug section */
         var testUser = userProfile(name: "John", age: 21, gender: 0, weight: 155, tipsy: 9999, blackOut: 9999)
         var newEvent = DrinkEvent(user: testUser)
         let newDrink = Beer()
         newEvent.addDrinks(newDrink: newDrink)
         print(newEvent.currentBAC)
         print(newEvent.drinksHad[0].timeWhenAdded)
+        
+        var b = 1
+        for i in 1...10 {
+            print("\"" + String(b) + "\",", separator: "", terminator: " ")
+            b += 1
+            
+        }
         
     }
     
@@ -59,7 +69,7 @@ class WelcomeScreenViewController: UIViewController {
         
         //Debug button
         //jumpToMain.addTarget(self, action: #selector(jumpAction), for: .touchUpInside)
-        
+        debug.addTarget(self, action: #selector(debugAction), for: .touchUpInside)
         
     }
     
@@ -68,6 +78,9 @@ class WelcomeScreenViewController: UIViewController {
         print("Get started button tapped, going to profile creation scene")
     }
     
+    @objc func debugAction() {
+        performSegue(withIdentifier: "debug", sender: nil)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "debugSeagueToMain"{
             if let middleVC = segue.destination as? UITabBarController {

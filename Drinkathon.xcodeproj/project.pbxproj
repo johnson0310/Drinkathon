@@ -20,6 +20,12 @@
 		2C3A86F42271693A00564D29 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A86F32271693A00564D29 /* PersistenceService.swift */; };
 		2C3A86F722716CC800564D29 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A86F522716CC800564D29 /* User+CoreDataClass.swift */; };
 		2C3A86F822716CC800564D29 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A86F622716CC800564D29 /* User+CoreDataProperties.swift */; };
+		2C3E6AD5227E427F00D5E3AA /* CustomDrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E6AD4227E427F00D5E3AA /* CustomDrinksViewController.swift */; };
+		2C3E6AD8227E452600D5E3AA /* AddBeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E6AD7227E452600D5E3AA /* AddBeerViewController.swift */; };
+		2C3E6ADA227E453600D5E3AA /* AddIPAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E6AD9227E453600D5E3AA /* AddIPAViewController.swift */; };
+		2C3E6ADC227E454300D5E3AA /* AddWineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E6ADB227E454300D5E3AA /* AddWineViewController.swift */; };
+		2C3E6ADE227E455B00D5E3AA /* AddChampagneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E6ADD227E455B00D5E3AA /* AddChampagneViewController.swift */; };
+		2C3E6AE0227E456B00D5E3AA /* AddSpiritsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E6ADF227E456B00D5E3AA /* AddSpiritsViewController.swift */; };
 		2C71B33B22726BD20004EB44 /* AddDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C71B33A22726BD20004EB44 /* AddDrinkViewController.swift */; };
 		2C71B33D22728D480004EB44 /* AddDrinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C71B33C22728D480004EB44 /* AddDrinkButton.swift */; };
 		2C71B33F2272A41D0004EB44 /* DrinkEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C71B33E2272A41D0004EB44 /* DrinkEvent.swift */; };
@@ -119,6 +125,12 @@
 		2C3A86F32271693A00564D29 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		2C3A86F522716CC800564D29 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2C3A86F622716CC800564D29 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2C3E6AD4227E427F00D5E3AA /* CustomDrinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDrinksViewController.swift; sourceTree = "<group>"; };
+		2C3E6AD7227E452600D5E3AA /* AddBeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBeerViewController.swift; sourceTree = "<group>"; };
+		2C3E6AD9227E453600D5E3AA /* AddIPAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIPAViewController.swift; sourceTree = "<group>"; };
+		2C3E6ADB227E454300D5E3AA /* AddWineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWineViewController.swift; sourceTree = "<group>"; };
+		2C3E6ADD227E455B00D5E3AA /* AddChampagneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChampagneViewController.swift; sourceTree = "<group>"; };
+		2C3E6ADF227E456B00D5E3AA /* AddSpiritsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpiritsViewController.swift; sourceTree = "<group>"; };
 		2C71B33A22726BD20004EB44 /* AddDrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDrinkViewController.swift; sourceTree = "<group>"; };
 		2C71B33C22728D480004EB44 /* AddDrinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDrinkButton.swift; sourceTree = "<group>"; };
 		2C71B33E2272A41D0004EB44 /* DrinkEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkEvent.swift; sourceTree = "<group>"; };
@@ -227,6 +239,18 @@
 			path = AppData;
 			sourceTree = "<group>";
 		};
+		2C3E6AD6227E43A800D5E3AA /* DrinkSelection */ = {
+			isa = PBXGroup;
+			children = (
+				2C3E6AD7227E452600D5E3AA /* AddBeerViewController.swift */,
+				2C3E6AD9227E453600D5E3AA /* AddIPAViewController.swift */,
+				2C3E6ADB227E454300D5E3AA /* AddWineViewController.swift */,
+				2C3E6ADD227E455B00D5E3AA /* AddChampagneViewController.swift */,
+				2C3E6ADF227E456B00D5E3AA /* AddSpiritsViewController.swift */,
+			);
+			path = DrinkSelection;
+			sourceTree = "<group>";
+		};
 		2CA68EE62268378C008AA4FF = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +282,7 @@
 		2CA68EF12268378C008AA4FF /* Drinkathon */ = {
 			isa = PBXGroup;
 			children = (
+				2C3E6AD6227E43A800D5E3AA /* DrinkSelection */,
 				2CA68EF22268378C008AA4FF /* AppDelegate.swift */,
 				2CA68EF42268378C008AA4FF /* ProfileCreationViewController.swift */,
 				2CA68EF62268378C008AA4FF /* Main.storyboard */,
@@ -273,6 +298,7 @@
 				2C71B33A22726BD20004EB44 /* AddDrinkViewController.swift */,
 				2C71B33E2272A41D0004EB44 /* DrinkEvent.swift */,
 				2C804A80227A3969006DD0AB /* Drinks.swift */,
+				2C3E6AD4227E427F00D5E3AA /* CustomDrinksViewController.swift */,
 			);
 			path = Drinkathon;
 			sourceTree = "<group>";
@@ -545,18 +571,24 @@
 			files = (
 				2C3A86C9227140AB00564D29 /* UserLog.swift in Sources */,
 				2C3A86F02271511900564D29 /* Drinkathon.xcdatamodeld in Sources */,
+				2C3E6ADE227E455B00D5E3AA /* AddChampagneViewController.swift in Sources */,
 				2C804A81227A3969006DD0AB /* Drinks.swift in Sources */,
+				2C3E6ADA227E453600D5E3AA /* AddIPAViewController.swift in Sources */,
 				2CA68EF52268378C008AA4FF /* ProfileCreationViewController.swift in Sources */,
+				2C3E6AD8227E452600D5E3AA /* AddBeerViewController.swift in Sources */,
 				2CFBD74522692672005A5196 /* TrackingViewController.swift in Sources */,
 				2C3A86F722716CC800564D29 /* User+CoreDataClass.swift in Sources */,
+				2C3E6AE0227E456B00D5E3AA /* AddSpiritsViewController.swift in Sources */,
 				2C06C6912271703300B41935 /* WelcomeScreenViewController.swift in Sources */,
 				2CA68EF32268378C008AA4FF /* AppDelegate.swift in Sources */,
 				2CFBD7402268F3A1005A5196 /* UserDefaults.swift in Sources */,
 				2C3A86F822716CC800564D29 /* User+CoreDataProperties.swift in Sources */,
 				2C71B33B22726BD20004EB44 /* AddDrinkViewController.swift in Sources */,
 				2CFBD74E226A7DBB005A5196 /* SubmitButton.swift in Sources */,
+				2C3E6AD5227E427F00D5E3AA /* CustomDrinksViewController.swift in Sources */,
 				2C3A86F42271693A00564D29 /* PersistenceService.swift in Sources */,
 				2C71B33F2272A41D0004EB44 /* DrinkEvent.swift in Sources */,
+				2C3E6ADC227E454300D5E3AA /* AddWineViewController.swift in Sources */,
 				2C71B33D22728D480004EB44 /* AddDrinkButton.swift in Sources */,
 				2CFBD74F226A7DBB005A5196 /* SATextField.swift in Sources */,
 			);

@@ -26,6 +26,10 @@ class AddDrinkViewController: UIViewController {
     //Target Progress Bar
     @IBOutlet weak var drinkTargetProgress: UIProgressView!
     
+    //Drink event control
+    var drinkEvent : DrinkEvent?
+    var isFirstDrink = true
+    var drinkEvents = [DrinkEvent]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,8 +68,38 @@ class AddDrinkViewController: UIViewController {
     }
     
     func AddDrinkViewControllerButtonSetup() {
-        <#function body#>
+        addOneStandardDrink.addTarget(self, action: #selector(addOneStandardDrinkAction), for: .touchUpInside)
+        addCustomDrinks.addTarget(self, action: #selector(addCustomDrinksAction), for: .touchUpInside)
+        addPreviousCustomDrink.addTarget(self, action: #selector(addPreviousCustomDrinkAction), for: .touchUpInside)
     }
     
+    @objc func addOneStandardDrinkAction() {
+        //If it's the first drink, create a new drink event
+        if isFirstDrink { startEvent() }
+        let newDrink = standardDrink()
+        drinkEvent?.addDrinks(newDrink: newDrink)
+    }
+    
+    @objc func addCustomDrinksAction() {
+        //If it's the first drink, create a new drink event
+        if isFirstDrink { startEvent() }
+        performSegue(withIdentifier: "addDrinks-CustomDrinkSelection", sender: self)
+    }
+    
+    @objc func addPreviousCustomDrinkAction() {
+        //If it's the first drink, create a new drink event
+        if isFirstDrink { startEvent() }
+    }
+    
+    func startEvent() {
+        var newEvent = DrinkEvent(user: user)
+        isFirstDrink = false
+        drinkEvent = newEvent
+    }
+    
+    func endEvent() {
+        drinkEvents.append(drinkEvent!)
+        isFirstDrink = true
+    }
 
 }
